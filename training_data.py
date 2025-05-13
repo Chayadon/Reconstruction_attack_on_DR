@@ -1,5 +1,6 @@
 import numpy as np
-
+import keras
+from sklearn.manifold import Isomap
 
 def create_S(X, y, s_size):
     """
@@ -124,7 +125,7 @@ img_size = 28                # Number of image dimension 28x28
 
 
 # Load the dataset
-X_train, y_train, X_test, y_test = _________
+(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data() 
 
 # Concatenate training and test sets into a single dataset
 X = np.concatenate((X_train, X_test), axis=0)
@@ -137,7 +138,7 @@ x_head, y_head, X_tmp, y_tmp = create_train_and_test(X, y, train_size)
 X_tmp, y_tmp, s = create_S(X_tmp, y_tmp, s_size=s_size)
 
 # Initialize the embedding with the specified number of components (e.g., Isomap, PCA, t-SNE)
-embedding = _____(n_components=n_compo)
+embedding = Isomap(n_components=n_compo)
 
 # Apply the embedding function to generate embedded data
 # Each sample is concatenated with the known-member set and transformed using defined embedding

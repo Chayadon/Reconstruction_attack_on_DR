@@ -177,7 +177,7 @@ def train_model(model, trainloader, valloader):
     best_loss = np.inf      # Initialize best validation loss to infinity
     patience = 5            # Number of epochs to wait for improving before early stopping
 
-    for epoch in range(500):
+    for epoch in range(100):
         running_loss = 0.0
         for i, data in enumerate(trainloader):
             X, y = data
@@ -220,8 +220,8 @@ def train_model(model, trainloader, valloader):
         else:
             patience -= 1      # Decrease patience
             if patience == 0:
-                print(f'Stop training at epoch {epoch} !')
+                print(f'Stop training at epoch {epoch}!')
                 return best_model_weights    # Return best model after early stopping
 
-    print('Finished Training')
+    print(f'Training finished at epoch {epoch+1}')
     return model  # Return model after training completes if not early stopped
