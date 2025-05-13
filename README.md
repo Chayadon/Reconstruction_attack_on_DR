@@ -1,7 +1,7 @@
 # Reconstruction Neural Network for Attacking Dimensionality Reduction Methods
 
  This repository contains the official code of the paper named:
- > Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack.
+ > Chayadon Lumbut and Donlapark Ponnoprat(2024). Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack.
 
 We provide the code for the neural network architecture and dataset generation, which you can further implement and extend for your own experiments.
 
