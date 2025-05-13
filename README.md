@@ -14,7 +14,7 @@ In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly
 2. [The NIH Chest X-ray dataset](https://www.kaggle.com/datasets/nih-chest-xrays/data)
 
 ## 🤖Usage
-We will illustrate how to run our code on these settings:
+We will illustrate how to run our code on the following settings:
  - **Dataset** : the MNIST dataset
  - **Dimensionality reduction method** : Isomap
  - **Known-member set size(S)** : 9
@@ -31,8 +31,8 @@ We will illustrate how to run our code on these settings:
       Finished Training
       Mean Squared Error : 0.084983
       ```
-> [!NOTE]
-> Our provided code do not create any images of reconstruction data comparing with original data.
+      > [!NOTE]
+      > Our provided code do not create any images of reconstruction data comparing with original data.
 ## 📚Citation
 ```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
