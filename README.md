@@ -18,13 +18,18 @@ We will illustrate how to run our code on these settings:
  - **Dataset** : the MNIST dataset
  - **Dimensionality reduction method** : Isomap
  - **Known-member set size(S)** : 9
-1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you want to change the dataset, you can edit the code.
+1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you would like to change the dataset, you can edit the code.
       ```bash
       python training_data.py
       ```
 2. Run `main.py` to start the experiment.
       ```bash
       python main.py
+      ```
+3. If the code runs successfully, you should receive a result that resemble the following example.
+      ```bash
+            Finished Training
+            Mean Squared Error of S9 : 0.084983
       ```
 
 ## 📚Citation
