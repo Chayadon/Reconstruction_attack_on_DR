@@ -16,9 +16,10 @@ In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly
 ## 🤖Usage
 We will illustrate how to run our code on the following settings:
  - **Dataset** : the MNIST dataset
+ - **Dataset size** : (Training, 4,000), (Testing, 500), (Validation, 500)
  - **Dimensionality reduction method** : Isomap
  - **Known-member set size(S)** : 9
-1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you would like to change the dataset, you can edit the code.
+1. Run `training_data.py` to generate two files: `X_recon.npy` and `y_recon.npy`. If you would like to modify the dataset, you can edit the code.
       ```bash
       python training_data.py
       ```
@@ -31,8 +32,8 @@ We will illustrate how to run our code on the following settings:
       Finished Training
       Mean Squared Error : 0.084983
       ```
-      > [!NOTE]
-      > Our provided code do not create any images of reconstruction data comparing with original data.
+> [!NOTE]
+> Our provided code does not create any reconstructed images for comparison with the original data.
 ## 📚Citation
 ```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
