@@ -10,8 +10,8 @@ We provide the code for the neural network architecture and dataset generation, 
 
 ## 📂Datasets
 In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly downloadable from the following:
-1. [https://keras.io/api/datasets/mnist/]
-2. [https://www.kaggle.com/datasets/nih-chest-xrays/data]
+1. [The MNIST dataset](https://keras.io/api/datasets/mnist/)
+2. [The NIH Chest X-ray dataset](https://www.kaggle.com/datasets/nih-chest-xrays/data)
 
 ## 📚Citation
 ```bibtex
