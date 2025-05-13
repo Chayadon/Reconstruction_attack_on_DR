@@ -19,10 +19,13 @@ We will illustrate how to run our code on these settings:
  - **Dimensionality reduction method** : Isomap
  - **Known-member set size(S)** : 9
 1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you want to change the dataset, you can edit the code.
-      ```python
+      ```bash
       python training_data.py
       ```
-2. Run `main.py` to 
+2. Run `main.py` to start the experiment.
+      ```bash
+      python main.py
+      ```
 
 ## 📚Citation
 ```bibtex
