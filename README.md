@@ -8,7 +8,7 @@
 
 
 ## Citation
-'''bibtex
+```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
       title={Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack}, 
       author={Chayadon Lumbut and Donlapark Ponnoprat},
@@ -18,4 +18,4 @@
       primaryClass={cs.CR},
       url={https://arxiv.org/abs/2408.17151}, 
 }
-'''
+```
