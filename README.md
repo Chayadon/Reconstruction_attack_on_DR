@@ -13,6 +13,14 @@ In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly
 1. [The MNIST dataset](https://keras.io/api/datasets/mnist/)
 2. [The NIH Chest X-ray dataset](https://www.kaggle.com/datasets/nih-chest-xrays/data)
 
+## 🤖Usage
+We will illustrate how to run our code on the MNIST dataset.
+1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you want to change the dataset, you can edit the code.
+```bash
+python training_data.py
+```
+
+
 ## 📚Citation
 ```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
