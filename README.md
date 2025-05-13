@@ -28,10 +28,11 @@ We will illustrate how to run our code on these settings:
       ```
 3. If the code runs successfully, you should receive a result that resemble the following example.
       ```bash
-            Finished Training
-            Mean Squared Error of S9 : 0.084983
+      Finished Training
+      Mean Squared Error : 0.084983
       ```
-
+> [!NOTE]
+> Our provided code do not create any images of reconstruction data comparing with original data.
 ## 📚Citation
 ```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
