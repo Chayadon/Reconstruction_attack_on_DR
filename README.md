@@ -14,12 +14,15 @@ In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly
 2. [The NIH Chest X-ray dataset](https://www.kaggle.com/datasets/nih-chest-xrays/data)
 
 ## 🤖Usage
-We will illustrate how to run our code on the MNIST dataset.
+We will illustrate how to run our code on these settings:
+ - Dataset : the MNIST dataset
+ - Dimensionality reduction method : Isomap
+ - Known-member set size : 9
 1. Run `training_data.py` to generate two files called `X_recon.npy` and `y_recon.npy`. If you want to change the dataset, you can edit the code.
 ```bash
 python training_data.py
 ```
-
+2. Run `main.py` to 
 
 ## 📚Citation
 ```bibtex
