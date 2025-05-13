@@ -5,7 +5,7 @@
 
 We provide the code for the neural network architecture and dataset generation, which you can further implement and extend for your own experiments.
 
-🔧## Installation
+## 🔧Installation
 1. To run the provided code, the following main libraries need to be installed: `numpy`, `scikit-learn`, and `torch`
 
 
