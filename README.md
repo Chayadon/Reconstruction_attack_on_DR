@@ -8,8 +8,12 @@ We provide the code for the neural network architecture and dataset generation, 
 ## 🔧Installation
 1. To run the provided code, the following main libraries need to be installed: `numpy`, `scikit-learn`, and `torch`
 
+## 📂Datasets
+In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly downloadable from the following:
+1. [https://keras.io/api/datasets/mnist/]
+2. [https://www.kaggle.com/datasets/nih-chest-xrays/data]
 
-## Citation
+## 📚Citation
 ```bibtex
 @misc{lumbut2024investigatingprivacyleakagedimensionality,
       title={Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack}, 
