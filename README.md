@@ -25,8 +25,13 @@ We will illustrate how to run our code on the following settings:
       ```
 2. If the code runs successfully, you should receive a result that resembles the following example.
       ```bash
+      # The model has been trained through all epochs
       Training finished
       Mean Squared Error : 0.084983
+
+      # Early stopping is activated
+      Stop training at epoch 44!
+      Mean Squared Error : 0.067679
       ```
 > [!NOTE]
 > Our provided code does not create any reconstructed images for comparison with the original data.
