@@ -16,7 +16,7 @@ In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly
 ## 🤖Usage
 We will illustrate how to run our code on the following settings:
  - **Dataset** : the MNIST dataset
- - **Dataset size** : (Training, 4,000), (Testing, 500), (Validation, 500)
+ - **Dataset size** : {(Training, 4,000), (Testing, 500), (Validation, 500)}
  - **Dimensionality reduction method** : Isomap
  - **Known-member set size(S)** : 9
 1. Run `training_data.py` to generate two files: `X_recon.npy` and `y_recon.npy`. If you would like to modify the dataset, you can edit the code.
