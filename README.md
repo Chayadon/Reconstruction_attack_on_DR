@@ -29,7 +29,7 @@ We will illustrate how to run our code on the following settings:
       ```
 3. If the code runs successfully, you should receive a result that resemble the following example.
       ```bash
-      Finished Training
+      Training finished
       Mean Squared Error : 0.084983
       ```
 > [!NOTE]
