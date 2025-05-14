@@ -6,7 +6,7 @@
 We provide the code for the neural network architecture and dataset generation, which you can further implement and extend for your own experiments.
 
 ## 🔧Installation
-1. To run the provided code, the following main libraries need to be installed: `numpy`, `scikit-learn`, and `torch`
+1. To run the provided code, the following main libraries need to be installed: `numpy`, `scikit-learn`, and `torch`.
 
 ## 📂Datasets
 In this paper, we use the MNIST and NIH Chest X-ray datasets, which are publicly downloadable from the following:
