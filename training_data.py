@@ -1,6 +1,7 @@
 import numpy as np
 import keras
 from sklearn.manifold import Isomap
+from config import s_size, train_size, img_size, n_compo
 
 def create_S(X, y, s_size):
     """
@@ -19,7 +20,6 @@ def create_S(X, y, s_size):
     """
     # Set random seed for reproducibility
     np.random.seed(123)    
-
     # Initialize an empty array to hold the known-member set
     S = np.zeros((s_size, img_size, img_size))
 
@@ -98,7 +98,7 @@ def embedding_function(x_head, y_head, S, embedding, train_size, s_size):
     """
     # For reproducibility
     np.random.seed(123)
-    
+
     # Create empty arrays storing embedded data and its original
     X_recon = np.zeros((train_size, n_compo * (s_size + 1)))  # Embedded data output
     y_recon = np.zeros((train_size, img_size, img_size)) # Output is original data
@@ -117,31 +117,26 @@ def embedding_function(x_head, y_head, S, embedding, train_size, s_size):
 
     return X_recon, y_recon
 
-# Set known-member set size, training set size, and number of components for the embedding
-s_size = 9                   # Number of known-member set
-train_size = 5000            # Number of all samples to extract
-n_compo = 2                  # Number of components for the embedding
-img_size = 28                # Number of image dimension 28x28
+def begin_create_data():
+    
+    # Load the dataset
+    (X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data() 
 
+    # Concatenate training and test sets into a single dataset
+    X = np.concatenate((X_train, X_test), axis=0)
+    y = np.concatenate((X_train, X_test), axis=0)
 
-# Load the dataset
-(X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data() 
+    # Create the training set of size 'train_size', and keep the remaining data in X_tmp and y_tmp
+    x_head, y_head, X_tmp, y_tmp = create_train_and_test(X, y, train_size)
 
-# Concatenate training and test sets into a single dataset
-X = np.concatenate((X_train, X_test), axis=0)
-y = np.concatenate((X_train, X_test), axis=0)
+    # From the remaining data, create the known-member set (S) corresponding to the size of 's_size'
+    X_tmp, y_tmp, s = create_S(X_tmp, y_tmp, s_size=s_size)
 
-# Create the training set of size 'train_size', and keep the remaining data in X_tmp and y_tmp
-x_head, y_head, X_tmp, y_tmp = create_train_and_test(X, y, train_size)
+    # Initialize the embedding with the specified number of components (e.g., Isomap, PCA, t-SNE)
+    embedding = Isomap(n_components=n_compo)
 
-# From the remaining data, create the known-member set (S) corresponding to the size of 's_size'
-X_tmp, y_tmp, s = create_S(X_tmp, y_tmp, s_size=s_size)
-
-# Initialize the embedding with the specified number of components (e.g., Isomap, PCA, t-SNE)
-embedding = Isomap(n_components=n_compo)
-
-# Apply the embedding function to generate embedded data
-# Each sample is concatenated with the known-member set and transformed using defined embedding
-X_recon, y_recon = embedding_function(x_head, y_head, s, embedding, train_size, s_size)
-np.save("X_recon.npy", X_recon)
-np.save("y_recon.npy", y_recon)
+    # Apply the embedding function to generate embedded data
+    # Each sample is concatenated with the known-member set and transformed using defined embedding
+    X_recon, y_recon = embedding_function(x_head, y_head, s, embedding, train_size, s_size)
+    np.save("X_recon.npy", X_recon)
+    np.save("y_recon.npy", y_recon)

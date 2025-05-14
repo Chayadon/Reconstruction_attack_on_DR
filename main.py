@@ -2,6 +2,10 @@ import numpy as np
 from training_data import *
 from recons_network import *
 from sklearn.metrics import mean_squared_error
+from config import img_size, n_compo
+
+# Create data for reconstruction
+begin_create_data()
 
 # Load embedded data from .npy files
 X = np.load('X_recon.npy')
