@@ -1,4 +1,4 @@
-# Reconstruction Neural Networks for Attacking Dimensionality Reduction Methods :space_invader:
+# Reconstruction Neural Networks for Attacking Dimensionality Reduction Methods:space_invader:
 
  This repository contains the official code of the paper named:
  > Chayadon Lumbut and Donlapark Ponnoprat(2024). Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack.
