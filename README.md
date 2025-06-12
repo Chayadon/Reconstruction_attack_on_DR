@@ -37,13 +37,17 @@ We will illustrate how to run our code on the following settings:
 > Our provided code does not create any reconstructed images for comparison with the original data.
 ## 📚Citation
 ```bibtex
-@misc{lumbut2024investigatingprivacyleakagedimensionality,
-      title={Investigating Privacy Leakage in Dimensionality Reduction Methods via Reconstruction Attack}, 
-      author={Chayadon Lumbut and Donlapark Ponnoprat},
-      year={2024},
-      eprint={2408.17151},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2408.17151}, 
+@article{LUMBUT2025104102,
+title = {Investigating privacy leakage in dimensionality reduction methods via reconstruction attack},
+journal = {Journal of Information Security and Applications},
+volume = {92},
+pages = {104102},
+year = {2025},
+issn = {2214-2126},
+doi = {https://doi.org/10.1016/j.jisa.2025.104102},
+url = {https://www.sciencedirect.com/science/article/pii/S2214212625001395},
+author = {Chayadon Lumbut and Donlapark Ponnoprat},
+keywords = {Dimensionality reduction, Manifold learning, Machine learning, Neural network, Reconstruction attack, Differential privacy},
+abstract = {This study investigates privacy leakage in dimensionality reduction methods through a novel machine learning-based reconstruction attack. Employing an informed adversary threat model, we develop a neural network capable of reconstructing high-dimensional data from low-dimensional embeddings. We evaluate six popular dimensionality reduction techniques: principal component analysis (PCA), sparse random projection (SRP), multidimensional scaling (MDS), Isomap, t-distributed stochastic neighbor embedding (t-SNE), and uniform manifold approximation and projection (UMAP). Using both MNIST and NIH Chest X-ray datasets, we perform a qualitative analysis to identify key factors affecting reconstruction quality. Furthermore, we assess the effectiveness of an additive noise mechanism in mitigating these reconstruction attacks. Our experimental results on both datasets reveal that the attack is effective against deterministic methods (PCA and Isomap). but ineffective against methods that employ random initialization (SRP, MDS, t-SNE and UMAP). The experimental results also show that, for PCA and Isomap, our reconstruction network produces higher quality outputs compared to a previously proposed network. We also study the effect of additive noise mechanism to prevent the reconstruction attack. Our experiment shows that, when adding the images with large noises before performing PCA or Isomap, the attack produced severely distorted reconstructions. In contrast, for the other four methods, the reconstructions still show some recognizable features, though they bear little resemblance to the original images.}
 }
 ```
